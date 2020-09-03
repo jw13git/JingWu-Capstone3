@@ -1,0 +1,636 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20202.20.0525.1210                               -->
+<workbook source-build='2020.2.1 (20202.20.0525.1210)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='yesno_avg' inline='true' name='federated.07iva0m0npdtx5112mzbc158xzbw' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='yesno_avg' name='textscan.0nphgr418lurgq1fsih2k0er87vd'>
+            <connection class='textscan' directory='C:/Users/Jing/Desktop/Galvanize_Capstones/JingWu-Capstone3' filename='yesno_avg.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='Total_Percentages' name='textscan.0ssvq020lktuwp1bd6bjh1pd9tlk'>
+            <connection class='textscan' directory='C:/Users/Jing/Desktop/Galvanize_Capstones/JingWu-Capstone3' filename='Total_Percentages.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='Devices_Conversion' name='textscan.018lx8i061p0u2148ysrp0fk29bt'>
+            <connection class='textscan' directory='C:/Users/Jing/Desktop/Galvanize_Capstones/JingWu-Capstone3' filename='Devices_Conversion.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.018lx8i061p0u2148ysrp0fk29bt' name='Devices_Conversion.csv' table='[Devices_Conversion#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='Device' ordinal='0' />
+            <column datatype='real' name='Conversion_rate' ordinal='1' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.0nphgr418lurgq1fsih2k0er87vd' name='yesno_avg.csv' table='[yesno_avg#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='Channels' ordinal='0' />
+              <column datatype='real' name='Avg_Clicks' ordinal='1' />
+            </columns>
+          </relation>
+          <relation connection='textscan.018lx8i061p0u2148ysrp0fk29bt' name='Devices_Conversion.csv' table='[Devices_Conversion#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='Device' ordinal='0' />
+              <column datatype='real' name='Conversion_rate' ordinal='1' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0ssvq020lktuwp1bd6bjh1pd9tlk' name='Total_Percentages.csv' table='[Total_Percentages#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='Downloads' ordinal='0' />
+              <column datatype='real' name='Percentage of Total' ordinal='1' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[yesno_avg.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Devices_Conversion.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Total_Percentages.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Channels</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Channels]</local-name>
+            <parent-name>[yesno_avg.csv]</parent-name>
+            <remote-alias>Channels</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[yesno_avg.csv_82A7D2D9828745D5964BCA76AD8C1C2E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Avg_Clicks</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Avg_Clicks]</local-name>
+            <parent-name>[yesno_avg.csv]</parent-name>
+            <remote-alias>Avg_Clicks</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[yesno_avg.csv_82A7D2D9828745D5964BCA76AD8C1C2E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Device</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Device]</local-name>
+            <parent-name>[Devices_Conversion.csv]</parent-name>
+            <remote-alias>Device</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Devices_Conversion.csv_4FB2B3FFEE3649FCAD75327B752AE4D7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Conversion_rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Conversion_rate]</local-name>
+            <parent-name>[Devices_Conversion.csv]</parent-name>
+            <remote-alias>Conversion_rate</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Devices_Conversion.csv_4FB2B3FFEE3649FCAD75327B752AE4D7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Downloads</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Downloads]</local-name>
+            <parent-name>[Total_Percentages.csv]</parent-name>
+            <remote-alias>Downloads</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Total_Percentages.csv_2FA2E4001C1D42A59F16D7DA1B20AAAA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percentage of Total</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Percentage of Total]</local-name>
+            <parent-name>[Total_Percentages.csv]</parent-name>
+            <remote-alias>Percentage of Total</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Total_Percentages.csv_2FA2E4001C1D42A59F16D7DA1B20AAAA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Avg Clicks' datatype='real' name='[Avg_Clicks]' role='measure' type='quantitative' />
+      <column datatype='string' name='[Channels]' role='dimension' type='nominal' />
+      <column caption='Conversion rate' datatype='real' name='[Conversion_rate]' role='measure' type='quantitative' />
+      <column datatype='string' name='[Downloads]' role='dimension' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='Devices_Conversion.csv' datatype='table' name='[__tableau_internal_object_id__].[Devices_Conversion.csv_4FB2B3FFEE3649FCAD75327B752AE4D7]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Total_Percentages.csv' datatype='table' name='[__tableau_internal_object_id__].[Total_Percentages.csv_2FA2E4001C1D42A59F16D7DA1B20AAAA]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='yesno_avg.csv' datatype='table' name='[__tableau_internal_object_id__].[yesno_avg.csv_82A7D2D9828745D5964BCA76AD8C1C2E]' role='measure' type='quantitative' />
+      <column-instance column='[Channels]' derivation='None' name='[none:Channels:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Downloads]' derivation='None' name='[none:Downloads:nk]' pivot='key' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Downloads:nk]' type='palette'>
+            <map to='#ffab40'>
+              <bucket>&quot;Not Downloaded&quot;</bucket>
+            </map>
+            <map to='#ffffff'>
+              <bucket>&quot;App Downloaded&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Channels:nk]' type='palette'>
+            <map to='#435d74'>
+              <bucket>&quot;Download&quot;</bucket>
+            </map>
+            <map to='#ffab40'>
+              <bucket>&quot;No Download&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Devices_Conversion.csv' id='Devices_Conversion.csv_4FB2B3FFEE3649FCAD75327B752AE4D7'>
+            <properties context=''>
+              <relation connection='textscan.018lx8i061p0u2148ysrp0fk29bt' name='Devices_Conversion.csv' table='[Devices_Conversion#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='Device' ordinal='0' />
+                  <column datatype='real' name='Conversion_rate' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='Total_Percentages.csv' id='Total_Percentages.csv_2FA2E4001C1D42A59F16D7DA1B20AAAA'>
+            <properties context=''>
+              <relation connection='textscan.0ssvq020lktuwp1bd6bjh1pd9tlk' name='Total_Percentages.csv' table='[Total_Percentages#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='Downloads' ordinal='0' />
+                  <column datatype='real' name='Percentage of Total' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='yesno_avg.csv' id='yesno_avg.csv_82A7D2D9828745D5964BCA76AD8C1C2E'>
+            <properties context=''>
+              <relation connection='textscan.0nphgr418lurgq1fsih2k0er87vd' name='yesno_avg.csv' table='[yesno_avg#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='Channels' ordinal='0' />
+                  <column datatype='real' name='Avg_Clicks' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[Avg_Clicks]' />
+              <expression op='[Conversion_rate]' />
+            </expression>
+            <first-end-point object-id='yesno_avg.csv_82A7D2D9828745D5964BCA76AD8C1C2E' />
+            <second-end-point object-id='Devices_Conversion.csv_4FB2B3FFEE3649FCAD75327B752AE4D7' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Avg_Clicks]' />
+              <expression op='[Percentage of Total]' />
+            </expression>
+            <first-end-point object-id='yesno_avg.csv_82A7D2D9828745D5964BCA76AD8C1C2E' />
+            <second-end-point object-id='Total_Percentages.csv_2FA2E4001C1D42A59F16D7DA1B20AAAA' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Channels Download VS No Download'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='yesno_avg' name='federated.07iva0m0npdtx5112mzbc158xzbw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.07iva0m0npdtx5112mzbc158xzbw'>
+            <column caption='Avg Clicks' datatype='real' name='[Avg_Clicks]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Channels]' role='dimension' type='nominal' />
+            <column-instance column='[Channels]' derivation='None' name='[none:Channels:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Avg_Clicks]' derivation='Sum' name='[sum:Avg_Clicks:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.07iva0m0npdtx5112mzbc158xzbw].[none:Channels:nk]' value='183' />
+            <format attr='color' value='#85d5e6' />
+            <format attr='font-size' value='14' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='font-size' data-class='subtotal' scope='rows' value='15' />
+            <format attr='font-weight' data-class='subtotal' scope='cols' value='bold' />
+            <format attr='color' data-class='subtotal' value='#85d5e6' />
+            <format attr='color' data-class='total' value='#85d5e6' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' value='12' />
+            <format attr='font-size' scope='cols' value='13' />
+            <format attr='font-size' scope='rows' value='13' />
+            <format attr='font-weight' scope='cols' value='bold' />
+            <format attr='color' scope='cols' value='#85d5e6' />
+            <format attr='color' scope='rows' value='#85d5e6' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#001633' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+            <format attr='font-size' value='11' />
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#85d5e6' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='color' value='#85d5e6' />
+          </style-rule>
+          <style-rule element='tooltip'>
+            <format attr='font-size' value='12' />
+            <format attr='color' value='#85d5e6' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.07iva0m0npdtx5112mzbc158xzbw].[none:Channels:nk]' />
+              <text column='[federated.07iva0m0npdtx5112mzbc158xzbw].[sum:Avg_Clicks:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.07iva0m0npdtx5112mzbc158xzbw].[sum:Avg_Clicks:qk]</rows>
+        <cols>[federated.07iva0m0npdtx5112mzbc158xzbw].[none:Channels:nk]</cols>
+      </table>
+      <simple-id uuid='{BDF10FA4-5F9C-4E63-B77A-09E1ABC710D7}' />
+    </worksheet>
+    <worksheet name='Devices Conversion Rate'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='yesno_avg' name='federated.07iva0m0npdtx5112mzbc158xzbw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.07iva0m0npdtx5112mzbc158xzbw'>
+            <column caption='Conversion rate' datatype='real' name='[Conversion_rate]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Device]' role='dimension' type='nominal' />
+            <column-instance column='[Conversion_rate]' derivation='Attribute' name='[attr:Conversion_rate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Device]' derivation='None' name='[none:Device:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Conversion_rate]' derivation='Sum' name='[sum:Conversion_rate:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.07iva0m0npdtx5112mzbc158xzbw].[sum:Conversion_rate:qk]' field-type='quantitative' max='1.6000000000000001' min='0.0014522676581173203' range-type='fixed' scale='log' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='color' value='#ffffff' />
+            <format attr='font-size' value='13' />
+            <format attr='text-format' field='[federated.07iva0m0npdtx5112mzbc158xzbw].[attr:Conversion_rate:qk]' value='p0.00%' />
+            <format attr='text-orientation' field='[federated.07iva0m0npdtx5112mzbc158xzbw].[attr:Conversion_rate:qk]' value='0' />
+            <format attr='text-format' field='[federated.07iva0m0npdtx5112mzbc158xzbw].[sum:Conversion_rate:qk]' value='p0.00%' />
+            <format attr='text-orientation' field='[federated.07iva0m0npdtx5112mzbc158xzbw].[sum:Conversion_rate:qk]' value='0' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='font-size' data-class='subtotal' scope='rows' value='15' />
+            <format attr='color' data-class='subtotal' value='#ffffff' />
+            <format attr='color' data-class='total' value='#ffffff' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' scope='rows' value='#ffffff' />
+            <format attr='color' scope='cols' value='#ffffff' />
+            <format attr='font-size' value='14' />
+            <format attr='font-weight' scope='cols' value='bold' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.07iva0m0npdtx5112mzbc158xzbw].[attr:Conversion_rate:qk]' num-steps='8' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-diverging'>
+                <color>#ffab40</color>
+                <color>#f7b663</color>
+                <color>#efc084</color>
+                <color>#e8c9a2</color>
+                <color>#e0d1be</color>
+                <color>#d9d9d9</color>
+                <color>#c9d8db</color>
+                <color>#b8d7de</color>
+                <color>#a7d6e0</color>
+                <color>#96d5e3</color>
+                <color>#85d5e6</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.07iva0m0npdtx5112mzbc158xzbw].[sum:Conversion_rate:qk]' num-steps='8' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-diverging'>
+                <color>#ffab40</color>
+                <color>#f7b663</color>
+                <color>#efc084</color>
+                <color>#e8c9a2</color>
+                <color>#e0d1be</color>
+                <color>#d9d9d9</color>
+                <color>#c9d8db</color>
+                <color>#b8d7de</color>
+                <color>#a7d6e0</color>
+                <color>#96d5e3</color>
+                <color>#85d5e6</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#001633' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#ffffff' />
+            <format attr='font-size' value='13' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='tooltip'>
+            <format attr='font-size' value='12' />
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.07iva0m0npdtx5112mzbc158xzbw].[sum:Conversion_rate:qk]' />
+              <lod column='[federated.07iva0m0npdtx5112mzbc158xzbw].[attr:Conversion_rate:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.07iva0m0npdtx5112mzbc158xzbw].[sum:Conversion_rate:qk]</rows>
+        <cols>[federated.07iva0m0npdtx5112mzbc158xzbw].[none:Device:nk]</cols>
+      </table>
+      <simple-id uuid='{8499930C-C3B7-403C-936B-CC7B4551F8B9}' />
+    </worksheet>
+    <worksheet name='Downloads'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='yesno_avg' name='federated.07iva0m0npdtx5112mzbc158xzbw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.07iva0m0npdtx5112mzbc158xzbw'>
+            <column datatype='string' name='[Downloads]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Percentage of Total]' role='measure' type='quantitative' />
+            <column-instance column='[Downloads]' derivation='None' name='[none:Downloads:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Percentage of Total]' derivation='Sum' name='[sum:Percentage of Total:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.07iva0m0npdtx5112mzbc158xzbw].[sum:Percentage of Total:qk]' field-type='quantitative' max='1.0800000000000001' min='0.0' minor-origin='0.0' minor-spacing='0.10000000000000001' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='color' value='#ffffff' />
+            <format attr='text-format' field='[federated.07iva0m0npdtx5112mzbc158xzbw].[sum:Percentage of Total:qk]' value='p0.00%' />
+            <format attr='font-size' value='13' />
+            <format attr='width' field='[federated.07iva0m0npdtx5112mzbc158xzbw].[none:Downloads:nk]' value='162' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='font-size' data-class='subtotal' scope='rows' value='15' />
+            <format attr='color' data-class='subtotal' value='#ffffff' />
+            <format attr='color' data-class='total' value='#ffffff' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' scope='rows' value='#ffffff' />
+            <format attr='color' scope='cols' value='#ffffff' />
+            <format attr='font-size' value='14' />
+            <format attr='font-weight' scope='cols' value='bold' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#001633' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#ffffff' />
+            <format attr='font-size' value='13' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='tooltip'>
+            <format attr='font-size' value='12' />
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.07iva0m0npdtx5112mzbc158xzbw].[none:Downloads:nk]' />
+              <text column='[federated.07iva0m0npdtx5112mzbc158xzbw].[sum:Percentage of Total:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.07iva0m0npdtx5112mzbc158xzbw].[sum:Percentage of Total:qk]</rows>
+        <cols>[federated.07iva0m0npdtx5112mzbc158xzbw].[none:Downloads:nk]</cols>
+      </table>
+      <simple-id uuid='{78ACAF19-2420-43FC-9043-A906E02E1FA1}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Channels Download VS No Download'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.07iva0m0npdtx5112mzbc158xzbw].[none:Channels:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2C1583EE-13E2-438E-A731-05B5D8B2C7FB}' />
+    </window>
+    <window class='worksheet' name='Downloads'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.07iva0m0npdtx5112mzbc158xzbw].[none:Downloads:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E8E0383B-49F6-461D-A8F9-3AE28B5618E5}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Devices Conversion Rate'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='38'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.07iva0m0npdtx5112mzbc158xzbw].[sum:Conversion_rate:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C95E4786-AB4E-4BE1-814B-3849766AD176}' />
+    </window>
+  </windows>
+</workbook>
